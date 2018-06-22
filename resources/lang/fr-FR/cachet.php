@@ -53,7 +53,7 @@ return [
 
     // Service Status
     'service' => [
-        'good'  => '[0,1] Système opérationnel|[2,Inf] Tous les systèmes sont opérationnels',
+        'good'  => '[0,1] Système opérationnel|[2,*] Tous les systèmes sont opérationnels',
         'bad'   => '[0,1] Le système rencontre actuellement des problèmes|[2,Inf] Certains systèmes rencontrent des problèmes',
         'major' => '[0,1] Le service rencontre une panne majeure|[2,Inf] Certains systèmes rencontrent une panne majeure',
     ],
@@ -75,12 +75,14 @@ return [
 
     // Subscriber
     'subscriber' => [
-        'subscribe'   => 'Abonnez-vous pour obtenir les dernières mises à jour.',
-        'unsubscribe' => 'Se désinscrire :link',
-        'button'      => 'S\'abonner',
-        'manage'      => [
+        'subscribe'           => 'Abonnez-vous pour obtenir les dernières mises à jour.',
+        'unsubscribe'         => 'Se désabonner',
+        'button'              => 'S\'abonner',
+        'manage_subscription' => 'Gérer l\'abonnement',
+        'manage'              => [
             'no_subscriptions' => 'Vous êtes actuellement abonné à toutes les mises à jour.',
             'my_subscriptions' => 'Vous êtes actuellement abonné aux mises à jour suivantes.',
+            'manage_at_link'   => 'Gérer vos abonnements à :link',
         ],
         'email' => [
             'subscribe'          => 'S\'abonner aux notifications par email.',
@@ -117,9 +119,18 @@ return [
         ],
     ],
 
+    // Meta descriptions
+    'meta' => [
+        'description' => [
+            'incident'  => 'Détails et mises à jour sur l\'incident :name qui a eu lieu le :date',
+            'schedule'  => 'Détails sur la période de maintenance planifiée :name débutant le :startDate',
+            'subscribe' => 'S’abonner à :app afin de recevoir les mises à jour des incidents et des périodes de maintenance planifiée',
+            'overview'  => 'Restez à jour avec les dernières mises à jour de :app.',
+        ],
+    ],
+
     // Other
     'home'            => 'Accueil',
-    'description'     => 'Restez à jour avec les dernières mises à jour de :app.',
     'powered_by'      => 'Propulsé par <a href="https://cachethq.io">Cachet</a>.',
     'timezone'        => 'Les heures sont affichées avec le fuseau horaire :timezone.',
     'about_this_site' => 'À propos du site',
